@@ -1,10 +1,13 @@
-import {createStore} from 'redux'
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
 import {combineReducers} from 'redux'
+import {profileReducer} from './reducers/ProfileReducer.js'
 
-//let store = createStore()
 
-//const reducers = combineReducers({
-// 
-//})
+const reducers = combineReducers({
+ 	profilePage:profileReducer
+})
 
-//export default store
+let store = createStore(reducers,applyMiddleware(thunk))
+
+export default store

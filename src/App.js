@@ -14,7 +14,6 @@ function App() {
 		<div><Route path = '/profile' render = {()=> <ProfileContainer />} /></div>
 		<div><Route path = '/news' render = {()=> <NewsContainer />} /></div>
 		<div><Route path = '/login' render = {()=> <LoginContainer />} /></div>
-		<Redirect from = '/' to = '/main' />
   	</div>
   
     

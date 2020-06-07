@@ -33,6 +33,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 
 .appWrapper{
 	display:grid;
-	grid-template-columns: auto%;
+	grid-template-columns: auto;
 	grid-template-rows: auto;
+	border: solid 10px #444749;
 }

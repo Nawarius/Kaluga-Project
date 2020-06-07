@@ -1,0 +1,46 @@
+
+.profileWrapper{
+	display:grid;
+	grid-template-columns: 200px 500px;
+	grid-template-rows: 200px auto;
+	background-color: aqua;
+}
+.profileAvatar{
+	width:200px;
+	height:200px;
+	background-color: lawngreen;
+}
+.profileStatus{
+	width:500px;
+	height:50px;
+	background-color: salmon;
+}
+.profileFullname{
+	width:200px;
+	height:50px;
+	background-color: dimgray;
+}
+.profileInfo{
+	width:500px;
+	height:200px;
+	background-color: red;
+	color:white;
+}
+.profilePosts{
+	width:500px;
+	height:300px;
+	background-color: blueviolet;
+	text-align: center;
+	color:white;
+	
+}
+.statusInfoWrapper{
+}
+.post{
+	border:solid 1px white;
+	margin-top: 10px;
+	margin-bottom:10px;
+}
+.info{
+	border:solid 1px white;
+}
