@@ -14,7 +14,7 @@ const ProfilePresent = (props) => {
 		})
 	
 	return <div className = {ProfileStyles.profileWrapper}>
-			<div ><img src = {props.profilePage.avatar} className = {ProfileStyles.profileAvatar}></img></div>
+			<div><img src = {props.profilePage.avatar} className = {ProfileStyles.profileAvatar}></img></div>
 			<div className = {ProfileStyles.statusInfoWrapper}>
 				<div className = {ProfileStyles.profileStatus}>{props.profilePage.status}</div>
 				<div className = {ProfileStyles.profileInfo}>{info}</div>

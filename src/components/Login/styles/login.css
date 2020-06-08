@@ -1,0 +1,28 @@
+.loginWrapper{
+	text-align: center;
+	background-color:darkgray
+}
+input {
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid black;
+  border-radius: 4px;
+}
+.submit {
+  background-color: #f4511e;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin-right:21.25%;
+  opacity: 0.7;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid black;
+  border-radius: 4px;
+}
+.submit:hover {opacity: 1}

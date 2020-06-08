@@ -2,11 +2,26 @@ import React, {useEffect} from 'react'
 import ProfilePresent from './ProfilePresent'
 import Preloader from '../Preloader.jsx'
 import {connect} from 'react-redux'
-import {statusAC,getProfileDataThunkCreator} from '../../redux/reducers/ProfileReducer.js'
+import {Redirect} from 'react-router-dom'
+import {statusAC,getProfileDataThunkCreator,loadedAC} from '../../redux/reducers/ProfileReducer.js'
+
+
+
+const ProfileContainer = (props) => {
+	
+	useEffect(()=>{
+		props.getProfileThunk();
+		return ()=>props.loaded(false)
+	},[])
+	
+	if(!props.auth) return <Redirect to = "/" />
+	return props.profilePage.isLoaded == false? <Preloader /> : <ProfilePresent {...props}/>
+}
 
 let mapStateToProps = (state) => {
 	return {
-		profilePage:state.profilePage
+		profilePage:state.profilePage,
+		auth:state.login.isAuth
 	}
 }
 
@@ -17,15 +32,11 @@ let mapDispatchToProps = (dispatch) => {
 		},
 		getProfileThunk(){
 			dispatch(getProfileDataThunkCreator())
+		},
+		loaded:(bool)=>{
+			dispatch(loadedAC(bool))
 		}
 	}
 }
 
-const ProfileContainer = (props) => {
-	useEffect(()=>{
-		props.getProfileThunk();
-	},[])
-	
-	return props.profilePage.isLoaded == false? <Preloader /> : <ProfilePresent {...props}/>
-}
 export default connect(mapStateToProps,mapDispatchToProps)(ProfileContainer)
