@@ -13,14 +13,14 @@ const ProfilePresent = (props) => {
 			</div>	
 		})
 	
-	return <div className = {ProfileStyles.profileWrapper}>
-			<div><img src = {props.profilePage.avatar} className = {ProfileStyles.profileAvatar}></img></div>
+	return <div >
+			<div><img src = {props.profilePage.avatar} ></img></div>
 			<div className = {ProfileStyles.statusInfoWrapper}>
-				<div className = {ProfileStyles.profileStatus}>{props.profilePage.status}</div>
-				<div className = {ProfileStyles.profileInfo}>{info}</div>
+				<div >{props.profilePage.status}</div>
+				<div >{info}</div>
 			</div>
-			<div className = {ProfileStyles.profileFullname}>{props.profilePage.firstName} {props.profilePage.lastName}</div>
-			<div className = {ProfileStyles.profilePosts}>{posts}</div>
+			<div >{props.profilePage.firstName} {props.profilePage.lastName}</div>
+			<div >{posts}</div>
 		</div>
 	
 }

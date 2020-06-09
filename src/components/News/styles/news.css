@@ -3,22 +3,24 @@
   width: 100%;
   padding: 0 20px;
   margin-bottom: 10px;
-  background: #E9EFF6;
+  background-color: #EFF1C6;
   line-height: 40px;
   border-width: 0;
-  border-radius: 20px;
+  color:black;
   font-family: 'Roboto', sans-serif;
 }
 .news h1{
 	font-weight: 600;
 }
-button {
-  background-color: #f4511e;
-  color: white;
+
+.newsWrapper button {
+  background-color: #D87D56;
+  color: black;
+	font-weight: 500;
   padding: 16px 32px;
   text-align: center;
   font-size: 14px;
-  opacity: 0.7;
+  opacity: 0.8;
   transition: 0.3s;
   display: inline-block;
   text-decoration: none;
@@ -26,4 +28,4 @@ button {
   border: 2px solid black;
   border-radius: 4px;
 }
-button:hover {opacity: 1}
+.newsWrapper button:hover {opacity: 1}

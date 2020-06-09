@@ -8,7 +8,7 @@ import './styles/news.css'
 const NewsPresent = (props) => {
 	
 	const news = props.newsPage.allNews.newsArray.map((el,index)=>{
-		return <div>
+		return <div className = "newsWrapper">
 			<div className = "news"><h1>{el.title}</h1>{el.news}<div><img src = {el.img} /></div></div>
 			<button onClick = {()=>{props.toggleModal('CHANGE',index,el.news,el.title)}}>Изменить</button>
 			<button onClick = {()=>{props.toggleModal('DELETE',index)}}>Удалить</button>

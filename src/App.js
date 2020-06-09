@@ -18,10 +18,23 @@ function App() {
   return <div>
 	  <div className = "appWrapper">
 			<AppBarContainer />
-			<div><Route path = '/' render = {()=> <MainContainer />} exact/></div>
-			<div><Route path = '/profile' render = {()=> <ProfileContainer />} /></div>
-			<div><Route path = '/news' render = {()=> <NewsContainer />} /></div>
-			<div><Route path = '/login' render = {()=> <LoginContainer />} /></div>
+			<div id="Home" className="tabcontent">
+  				<Route path = '/' render = {()=> <MainContainer />} exact/>
+			</div>
+			<div id="News" className="tabcontent">
+				<Route path = '/profile' render = {()=> <ProfileContainer />} />
+			</div>
+			<div id="Contact" className="tabcontent">
+ 				<Route path = '/news' render = {()=> <NewsContainer />} />
+			</div>
+			<div id="About" className="tabcontent">
+  				<Route path = '/login' render = {()=> <LoginContainer />} />
+			</div>
+			
+
+
+
+
 		</div>
   	
   </div>

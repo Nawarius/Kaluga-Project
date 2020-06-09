@@ -14,7 +14,7 @@ const ProfileContainer = (props) => {
 		return ()=>props.loaded(false)
 	},[])
 	
-	if(!props.auth) return <Redirect to = "/" />
+	if(!props.auth) return <Redirect to = "/login" />
 	return props.profilePage.isLoaded == false? <Preloader /> : <ProfilePresent {...props}/>
 }
 
