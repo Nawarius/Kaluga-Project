@@ -1,12 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './styles/TextModal.css'
+//import './styles/DeleteModal.css'
 import {useState, useEffect} from 'react'
 
-let TextRedactorModal = (props) => {
-	debugger;
+let DeleteModal = (props) => {
+		
 		let ref = React.createRef()
-		let titleRef = React.createRef()
+		
 		useEffect (()=>{
 			let modal = document.createElement('div')
 			document.body.appendChild(modal)
@@ -20,10 +20,8 @@ let TextRedactorModal = (props) => {
 				  <div class="form-right-decoration"></div>
 				  <div class="circle"></div>
 				  <div class="form-inner">
-					<h3>Что нового в мире?</h3>
-					<textarea placeholder = "Заголовок" rows="1" ref = {titleRef}></textarea>
-					<textarea placeholder="В мире произошло..." rows="3" ref = {ref}></textarea>
-					<button onClick = {()=>{props.add(ref.current.value,titleRef.current.value,props.onClose)}}>Сохранить</button>
+					<h3>Вы уверены, что хотите удалить новость?</h3>
+					<button onClick = {()=>{props.delete(props.id,props.onClose)}}>Удалить</button>
              	    <button className="cancelButton" onClick = {props.onClose}>Отмена</button>
 				  </div>
 				</div>
@@ -31,7 +29,7 @@ let TextRedactorModal = (props) => {
         
     }
 
-export default TextRedactorModal
+export default DeleteModal
 //<div><textarea ref = {ref}></textarea></div>
 //                <div>
 //                	<button onClick = {()=>{props.save(ref.current.value)}}>Сохранить</button>
