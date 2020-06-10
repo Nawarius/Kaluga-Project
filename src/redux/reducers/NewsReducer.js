@@ -29,7 +29,6 @@ export const newsReducer = (state = initialState, action) => {
 				return {...state, isLoaded:action.booleanValue}
 			}
 			case ADD_NEWS: {
-				debugger;
 				if(!action == '' && !action.title){
 					alert("Ошибка: Нельзя добавить пустую новость");
 					return state
@@ -40,7 +39,7 @@ export const newsReducer = (state = initialState, action) => {
 			}
 			case DELETE_NEWS:{
 				let stateCopy = {...state}
-				stateCopy.allNews.newsArray.splice(action.id,action.id+1);
+				stateCopy.allNews.newsArray.splice(action.id,1);
 				return stateCopy
 			}
 			case UPDATE_NEWS:{

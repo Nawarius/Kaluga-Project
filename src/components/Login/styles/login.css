@@ -1,7 +1,7 @@
 .loginWrapper{
 	text-align: center;
 	background-color:darkgray;
-	height: 100vh
+	height:100vh;
 }
 .loginWrapper input {
   width: 30%;

@@ -4,11 +4,9 @@
   margin: auto;
   text-align: center;
   font-family: arial;
+  height:100%;
 }
 
-.card title{
-	
-}
 .card img {
 	width: 200px;
 	height: 200px;
