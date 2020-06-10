@@ -10,7 +10,7 @@ const initialState = {
 	status:null,
 	avatar:null,
 	isLoaded:false,
-	profilePosts: {posts:[]},
+	profileSkills: {skills:[]},
 	profileInfo: {info:[]}
 }
 

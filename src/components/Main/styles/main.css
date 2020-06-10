@@ -1,0 +1,7 @@
+
+.mainWrapp{
+	height: 100vh
+}
+.mainWrapp h1,h2,h3,h4{
+	padding:10px;
+}

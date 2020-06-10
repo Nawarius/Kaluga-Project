@@ -6,8 +6,8 @@ import {authThunkCreator} from '../../redux/reducers/LoginReducer.js'
 import {useState,useEffect} from 'react'
 
 
-const access = 'https://s1.iconbird.com/ico/0912/ILikeButtons3A/w512h5121348753316CuteBallGo.png'
-const refuse = 'https://www.juliehyde.com.au/wp-content/uploads/2017/01/red-cross.png'
+const access = 'https://media.giphy.com/media/LjzktjnBX95aHUhoG6/giphy.gif'
+const refuse = 'https://media0.giphy.com/media/dt6qassLoUgtDCwf3h/source.gif'
 const smallPreloader = 'https://itsin.in/images/preloader.gif'
 
 let input = document.createElement('img')
@@ -21,6 +21,7 @@ const LoginContainer = (props) => {
 	},[props.error,props.auth,loading])
 
 	const whenSubmit = (data) => {
+			if(!data.login || !data.password) {alert("Ошибка: одно из полей пустое");return null}
 			document.querySelector('.submit').setAttribute('disabled', 'true')
 			setLoading(!loading)
 			if(!props.auth) {

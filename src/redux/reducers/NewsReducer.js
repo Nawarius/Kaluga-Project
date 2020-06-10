@@ -29,6 +29,11 @@ export const newsReducer = (state = initialState, action) => {
 				return {...state, isLoaded:action.booleanValue}
 			}
 			case ADD_NEWS: {
+				debugger;
+				if(!action == '' && !action.title){
+					alert("Ошибка: Нельзя добавить пустую новость");
+					return state
+				}
 				let obj = {news:action.text, title:action.title}
 				state.allNews.newsArray.unshift(obj)
 				return {...state}
@@ -39,6 +44,10 @@ export const newsReducer = (state = initialState, action) => {
 				return stateCopy
 			}
 			case UPDATE_NEWS:{
+				if(!action.text && !action.title){
+					alert("Ошибка: Нельзя сделать новость пустой");
+					return state
+				}
 				let stateCopy = {...state}
 				stateCopy.allNews.newsArray[action.id].news = action.text;
 				stateCopy.allNews.newsArray[action.id].title = action.title;
