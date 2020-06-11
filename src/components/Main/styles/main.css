@@ -1,6 +1,7 @@
 
 .mainWrapp{
-	height: 100vh
+ background-color: #001D30; 
+ min-height: 100%;
 }
 .mainWrapp h1,h2,h3,h4{
 	padding:10px;

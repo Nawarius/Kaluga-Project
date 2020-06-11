@@ -12,6 +12,7 @@
 a:focus,a:active{outline: none;}
 nav,footer,header,aside{display: block;}
 html,body{
+	
     height: 100%;
     width: 100%;
     font-size: 100%;
@@ -30,7 +31,7 @@ a:hover{text-decoration: none;}
 
 img{vertical-align: top;}
 
-/* Style tab links */
+
 .tablink {
   background-color: #555;
   color: white;
@@ -51,9 +52,8 @@ img{vertical-align: top;}
   color: white;
   height: 100%;
 }
+.appWrapper{
+	 height: 100%;
+}
 
-#Home {background-color: #001D30;}
-#News {background-color: #4859D8;}
-#Contact {background-color: #f69a73	;}
-#About {background-color: orange;}
-
+#root {height:100%}

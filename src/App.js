@@ -12,30 +12,15 @@ import {Route, Redirect} from 'react-router-dom'
 
 function App() {
 	
-	
-	
-	
-  return <div>
-	  <div className = "appWrapper">
+  return <div className = "appWrapper">
 			<AppBarContainer />
-			<div id="Home" className="tabcontent">
+			<div className="tabcontent">
   				<Route path = '/' render = {()=> <MainContainer />} exact/>
-			</div>
-			<div id="News" className="tabcontent">
 				<Route path = '/profile' render = {()=> <ProfileContainer />} />
-			</div>
-			<div id="Contact" className="tabcontent">
  				<Route path = '/news' render = {()=> <NewsContainer />} />
-			</div>
-			<div id="About" className="tabcontent">
   				<Route path = '/login' render = {()=> <LoginContainer />} />
 			</div>
-			
 
-
-
-
-		</div>
   	
   </div>
   
