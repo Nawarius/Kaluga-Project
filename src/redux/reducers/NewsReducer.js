@@ -29,7 +29,7 @@ export const newsReducer = (state = initialState, action) => {
 				return {...state, isLoaded:action.booleanValue}
 			}
 			case ADD_NEWS: {
-				if(!action == '' && !action.title){
+				if(!action.text && !action.title){
 					alert("Ошибка: Нельзя добавить пустую новость");
 					return state
 				}
