@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button id = "btn" onClick = "change(prompt('Вы хотите удалить кнопку?', 'Да'),deleteButton, saveButton)">Удали меня</button>
+</body>
+<script>
+	'use strict'
+	
+	let change = (answer, deleteBtn, save)=>{
+		answer === "Да"? deleteBtn() : save()
+	}
+	
+	let deleteButton = ()=>{
+		alert("Delete")
+		let el = document.getElementById('btn');
+		el.parentNode.removeChild(el);
+	}
+	
+	let saveButton = ()=>{
+		alert("Save")
+		return null;
+	}
+	
+	
+	</script>
+</html>
